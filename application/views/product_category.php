@@ -30,8 +30,7 @@
         
         <ul class="nav navbar-nav navbar-right" style="margin-top:20px;">
           <li><a href="/main/login">Login</a></li>
-          <li><a href="/main/cart">Shopping Cart (5)</a></li>
-        </ul>
+          <li><a href="/main/cart">Shopping Cart (<?= $this->session->userdata('cart')['total_items'] ?>)</a></li>        </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
@@ -43,12 +42,12 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Products<span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">Candy</a></li>
-                  <li><a href="#">Snacks</a></li>
-                  <li><a href="#">Ready to Eat</a></li>
-                  <li><a href="#">Fruits and Veggies</a></li>
-                  <li><a href="#">Meats</a></li>
-                  <li><a href="#">Spices and Sauces</a></li>
+                  <li><a href="/main/sort/2">Candy</a></li>
+                  <li><a href="/main/sort/1">Snacks</a></li>
+                  <li><a href="/main/sort/3">Ready to Eat</a></li>
+                  <li><a href="/main/sort/4">Fruits and Veggies</a></li>
+                  <li><a href="/main/sort/5">Meats</a></li>
+                  <li><a href="/main/sort/6">Spices and Sauces</a></li>
                 </ul>
               </li>
               <li><a href="#">New Arrivals</a></li>
@@ -62,135 +61,28 @@
           </form>
        </div>
        <br>
-      <h3>All Candy</h3>
+      <h3>All Products</h3>
       <div class="row">
-        <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="http://www.hearkencreative.com/wp-content/uploads/2012/01/japan-matcha-green-tea-kitkat-1024x784.jpg" alt="...">
-            <div class="caption">
-              <h3>Green Tea Kit Kat</h3>
-              <p>Imported from Japan! All the goodness of kit kats with green tea flavor!</p>
-              <p><a href="product_view" class="btn btn-primary" role="button">Learn More</a> <a href="#" class="btn btn-default" role="button">Add to Cart</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="http://www.weavernut.com/assets/images/wncprod/SM2574.jpg" alt="...">
-            <div class="caption">
-              <h3>Gems by Cadbury's</h3>
-              <p>Straight from India, poor imitation of m&ms</p>
-              <p><a href="productview.php" class="btn btn-primary" role="button">Learn More</a> <a href="#" class="btn btn-default" role="button">Add to Cart</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="http://mall.coimbatore.com/chocolates/fivestar.jpg" alt="...">
-            <div class="caption">
-              <h3>Cadbury's FiveStar</h3>
-              <p>Better than Mars Bars!</p>
-              <p><a href="productview.php" class="btn btn-primary" role="button">Learn More</a> <a href="#" class="btn btn-default" role="button">Add to Cart</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="http://www.paddysnax.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/i/m/img_02971.jpg" alt="...">
-            <div class="caption">
-              <h3>McVities Chocolate Digestives</h3>
-              <p>Digestives with a layer of milk chocolate. Yummy!!</p>
-              <p><a href="productview.php" class="btn btn-primary" role="button">Learn More</a> <a href="#" class="btn btn-default" role="button">Add to Cart</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
+          <?php foreach ($products as $product)
+          { ?>
 
-      <div class="row">
+  
         <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="http://www.hearkencreative.com/wp-content/uploads/2012/01/japan-matcha-green-tea-kitkat-1024x784.jpg" alt="...">
+          <div class="thumbnail" style="height:430px;">
+            <img src="<?= $product['imgurl'] ?>" alt="...">
             <div class="caption">
-              <h3>Green Tea Kit Kat</h3>
-              <p>Imported from Japan! All the goodness of kit kats with green tea flavor!</p>
-              <p><a href="productview.php" class="btn btn-primary" role="button">Learn More</a> <a href="#" class="btn btn-default" role="button">Add to Cart</a></p>
+              <h4 style="color:red;">$<?= $product['price'] ?></h4>
+              <h3><?= $product['name'] ?></h3>
+              <p><?= $product['description'] ?></p>
+              <p><a href="/main/product_view/<?= $product['id'] ?>" class="btn btn-primary" role="button">Learn More</a></p>
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="http://www.weavernut.com/assets/images/wncprod/SM2574.jpg" alt="...">
-            <div class="caption">
-              <h3>Gems by Cadbury's</h3>
-              <p>Straight from India, poor imitation of m&ms</p>
-              <p><a href="productview.php" class="btn btn-primary" role="button">Learn More</a> <a href="#" class="btn btn-default" role="button">Add to Cart</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="http://mall.coimbatore.com/chocolates/fivestar.jpg" alt="...">
-            <div class="caption">
-              <h3>Cadbury's FiveStar</h3>
-              <p>Better than Mars Bars!</p>
-              <p><a href="productview.php" class="btn btn-primary" role="button">Learn More</a> <a href="#" class="btn btn-default" role="button">Add to Cart</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="http://www.paddysnax.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/i/m/img_02971.jpg" alt="...">
-            <div class="caption">
-              <h3>McVities Chocolate Digestives</h3>
-              <p>Digestives with a layer of milk chocolate. Yummy!!</p>
-              <p><a href="productview.php" class="btn btn-primary" role="button">Learn More</a> <a href="#" class="btn btn-default" role="button">Add to Cart</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="http://www.hearkencreative.com/wp-content/uploads/2012/01/japan-matcha-green-tea-kitkat-1024x784.jpg" alt="...">
-            <div class="caption">
-              <h3>Green Tea Kit Kat</h3>
-              <p>Imported from Japan! All the goodness of kit kats with green tea flavor!</p>
-              <p><a href="productview.php" class="btn btn-primary" role="button">Learn More</a> <a href="#" class="btn btn-default" role="button">Add to Cart</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="http://www.weavernut.com/assets/images/wncprod/SM2574.jpg" alt="...">
-            <div class="caption">
-              <h3>Gems by Cadbury's</h3>
-              <p>Straight from India, poor imitation of m&ms</p>
-              <p><a href="productview.php" class="btn btn-primary" role="button">Learn More</a> <a href="#" class="btn btn-default" role="button">Add to Cart</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="http://mall.coimbatore.com/chocolates/fivestar.jpg" alt="...">
-            <div class="caption">
-              <h3>Cadbury's FiveStar</h3>
-              <p>Better than Mars Bars!</p>
-              <p><a href="productview.php" class="btn btn-primary" role="button">Learn More</a> <a href="#" class="btn btn-default" role="button">Add to Cart</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="http://www.paddysnax.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/i/m/img_02971.jpg" alt="...">
-            <div class="caption">
-              <h3>McVities Chocolate Digestives</h3>
-              <p>Digestives with a layer of milk chocolate. Yummy!!</p>
-              <p><a href="productview.php" class="btn btn-primary" role="button">Learn More</a> <a href="#" class="btn btn-default" role="button">Add to Cart</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
+    
+    <?php   }?>
+
+    
 
     </div>
     <footer class="footer">

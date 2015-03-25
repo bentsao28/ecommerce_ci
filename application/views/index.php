@@ -29,8 +29,8 @@
 	    	<img src="assets/mbr.png" style="display: inline-block; width:80px; margin-top:10px;">
 	      
 	      <ul class="nav navbar-nav navbar-right" style="margin-top:20px;">
-	      	<li><a href="/main/login">Login</a></li>
-	        <li><a href="/main/cart">Shopping Cart (5)</a></li>
+	      	<li><a href="/main/login">Welcome (<?= $this->session->userdata('user_fname')  ?> <?= $this->session->userdata('user_lname')  ?>)</a></li>
+	        <li><a href="/main/cart">Shopping Cart (<?= $this->session->userdata('cart')['total_items'] ?>)</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
@@ -44,12 +44,12 @@
 			          <a href="/main/products" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Products<span class="caret"></span></a>
 			          <ul class="dropdown-menu" role="menu">
 			          	<li><a href="/main/product_category">All Products</a></li>
-			            <li><a href="#">Candy</a></li>
-			            <li><a href="#">Snacks</a></li>
-			            <li><a href="#">Ready to Eat</a></li>
-			            <li><a href="#">Fruits and Veggies</a></li>
-			            <li><a href="#">Meats</a></li>
-			            <li><a href="#">Spices and Sauces</a></li>
+			            <li><a href="/main/sort/2">Candy</a></li>
+			            <li><a href="/main/sort/1">Snacks</a></li>
+			            <li><a href="/main/sort/3">Ready to Eat</a></li>
+			            <li><a href="/main/sort/6">Fruits and Veggies</a></li>
+			            <li><a href="/main/sort/5">Meats</a></li>
+			            <li><a href="/main/sort/4">Spices and Sauces</a></li>
 			          </ul>
 			        </li>
 			        <li><a href="#">New Arrivals</a></li>
