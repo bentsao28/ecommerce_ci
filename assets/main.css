@@ -84,8 +84,50 @@ body {
 
 .thumbnail h3{
 	height:50px;
+	overflow: auto;
 }
 .thumbnail p{
 	height: 60px;
 	overflow: auto;
+}
+.image_view img{
+	width:500px;
+	display: inline-block;
+}
+.caption_view{
+	width: 400px;
+	display: inline-block;
+}
+#shipping{
+	display: inline-block;
+	vertical-align: top;
+	width: 250px;
+	text-align: right;
+	margin-right: 50px;
+}
+#billing{
+	display: inline-block;
+	width: 250px;
+	text-align: right;
+	margin-right: 60px;
+}
+#total{
+	text-align: right;
+}
+#payment{
+	display: inline-block;
+	text-align: right;
+	width: 300px;
+	vertical-align: top;
+	
+}
+#buy{
+	margin-top: 50px;
+	margin-left: 150px;
+	height: 50px;
+	width: 150px;
+	background-color: #337ab7;
+	color: white;
+	border-radius: 15px;
+	font-size: 16px;
 }
