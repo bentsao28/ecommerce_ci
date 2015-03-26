@@ -29,7 +29,16 @@
 	    	<a href="/"><img src="/assets/mbr.png" style="display: inline-block; width:80px; margin-top:10px;"></a>
 	      
 	      <ul class="nav navbar-nav navbar-right" style="margin-top:20px;">
-	      	<li><a href="/main/login">Login</a></li>
+	        <?php 
+	        if($this->session->userdata('is_login') == true)
+	        	{
+		        	echo '<li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Welcome'.' '.$this->session->userdata('user_fname').'!<span class="caret"></span></a>';
+		        	echo '<ul class="dropdown-menu" role="menu">';
+		        	echo '<li><a href="/main/logoff">Log Off</a></li></ul>';
+		        }
+	        else
+	        	echo '<li><a href="/main/login">Login</a></li>';
+	        ?>
 	        <li><a href="/main/cart">Shopping Cart (<?= $this->session->userdata('cart')['total_items'] ?>)</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->

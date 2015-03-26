@@ -29,7 +29,16 @@
 	    	<img src="assets/mbr.png" style="display: inline-block; width:80px; margin-top:10px;">
 	      
 	      <ul class="nav navbar-nav navbar-right" style="margin-top:20px;">
-	      	<li><a href="/main/login">Welcome (<?= $this->session->userdata('user_fname')  ?> <?= $this->session->userdata('user_lname')  ?>)</a></li>
+	        <?php 
+	        if($this->session->userdata('is_login') == true)
+	        	{
+		        	echo '<li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Welcome'.' '.$this->session->userdata('user_fname').'!<span class="caret"></span></a>';
+		        	echo '<ul class="dropdown-menu" role="menu">';
+		        	echo '<li><a href="/main/logoff">Log Off</a></li></ul>';
+		        }
+	        else
+	        	echo '<li><a href="/main/login">Login</a></li>';
+	        ?>
 	        <li><a href="/main/cart">Shopping Cart (<?= $this->session->userdata('cart')['total_items'] ?>)</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
@@ -114,15 +123,15 @@
 
 			</div>
 		</div>
-	<footer class="footer">
-	 	<ul>
-	 		<li><a href="">Terms and Conditions</a></li>
-	 		<li><a href="">Privacy Policy</a></li>
-	 		<li><a href="">About Us</a></li>
-	 		<li><a href="">Contact</a></li>
-	 	</ul>
-	 	<h5 style="color: gray;">Copyright &copy 2015 MBR Foods Pvt. Ltd.</h5>
-	</footer>
+		<footer class="footer">
+		 	<ul>
+		 		<li><a href="">Terms and Conditions</a></li>
+		 		<li><a href="">Privacy Policy</a></li>
+		 		<li><a href="">About Us</a></li>
+		 		<li><a href="">Contact</a></li>
+		 	</ul>
+		 	<h5 style="color: gray;">Copyright &copy 2015 MBR Foods Pvt. Ltd.</h5>
+		</footer>
 	</div>
 </body>
 </html>

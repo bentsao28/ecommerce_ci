@@ -98,6 +98,9 @@ body {
 	width: 400px;
 	display: inline-block;
 }
+#shipbill{
+	margin-top: 50px;
+}
 #shipping{
 	display: inline-block;
 	vertical-align: top;

@@ -14,8 +14,6 @@ class Main extends CI_Controller {
 
 	public function index()
 	{
-		// $this->session->sess_destroy();
-		// die();
 		$this->load->view('index');
 
         if(!$this->session->userdata('cart'))
@@ -25,6 +23,11 @@ class Main extends CI_Controller {
  			);
 			$this->session->set_userdata('cart', $cart);
 		}
+	}
+	public function logoff()
+	{
+		$this->session->sess_destroy();
+		redirect("/");
 	}
 	public function add_item($id)
      {
