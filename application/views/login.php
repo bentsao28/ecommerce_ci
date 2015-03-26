@@ -1,10 +1,3 @@
-<?php
-session_start();
-
-
-?>
-
-
 <html>
 <head>
 	<title> Login and Registration</title>
@@ -30,19 +23,29 @@ session_start();
 	      
 	       <ul class="nav navbar-nav navbar-right" style="margin-top:20px;">
 	      	<li><a href="/main/login">Login</a></li>
-	        <li><a href="/main/cart">Shopping Cart (5)</a></li>
+	        <li><a href="/main/cart">Shopping Cart (<?= $this->session->userdata('cart')['total_items'] ?>)</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
 	  <div id="wrapper">
 	  <div class="container" >
-	  
+	  		<?php 
+			  			if($this->session->flashdata('errors'))
+			  			{
+			  				echo $this->session->flashdata('errors');
+			  			}
+			  			if($this->session->flashdata('success'))
+			  			{
+			  				echo $this->session->flashdata('success');
+			  			}
+			  		 ?>
+
 		  	<h1 style="text-align:center;">Please Login or Register</h1>
 		  	<div class="forms" style="margin:auto; text-align:center;">
 			  	<div class="login" style="display:inline-block; height:400px; vertical-align:top; padding-left:100px; padding-right:100px; border-right:1px solid black;">
 			  		<h3>Login</h3><br>
-			  		<form action="/main/login" method="post">
+			  		<form action="/main/user_login" method="post">
 			  			<input type="hidden" name="login"><br><br>
 			  			<input type="text" name="email" placeholder="email"><br><br>
 			  			<input type="password" name="password" placeholder="password"><br><br><br>
@@ -53,13 +56,13 @@ session_start();
 				<div class="register" style="display:inline-block; padding-left:100px; padding-right:100px; vertical-align:top; margin:auto;">
 					<h3>New Users</h3>
 					
-			  		<form action="/main/login" method="post">
-			  			<input type="hidden" name="login"><br><br>
-			  			<input type="text" name="email" placeholder="email"><br><br>
-			  			<input type="password" name="password" placeholder="password"><br><br>
-			  			<input type="password" name="password" placeholder="confirm password"><br><br>
+			  					  		<form action="/main/reg_user" method="post">
+			  			<!-- <input type="hidden" name="login"><br><br> -->
 			  			<input type="text" name="first_name" placeholder="first name"><br><br>
 			  			<input type="text" name="last_name" placeholder="last name"><br><br>
+			  			<input type="text" name="email" placeholder="email"><br><br>
+			  			<input type="password" name="password" placeholder="password"><br><br>
+			  			<input type="password" name="confirm" placeholder="confirm password"><br><br>
 
 			  			<br>
 			  			<input type="submit" value="Register" style="float:right;">

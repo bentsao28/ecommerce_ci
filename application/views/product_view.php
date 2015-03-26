@@ -29,8 +29,8 @@
 	    	<a href="/"><img src="/assets/mbr.png" style="display: inline-block; width:80px; margin-top:10px;"></a>
 	      
 	      <ul class="nav navbar-nav navbar-right" style="margin-top:20px;">
-	      	<li><a href="login.php">Login</a></li>
-	        <li><a href="/main/cart">Shopping Cart (5)</a></li>
+	      	<li><a href="/main/login">Login</a></li>
+	        <li><a href="/main/cart">Shopping Cart (<?= $this->session->userdata('cart')['total_items'] ?>)</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
@@ -38,13 +38,16 @@
 	<div id="wrapper">
 		<div class="container">
 
-				<div class="image" style="display:inline-block;">
- 					<img src="http://www.hearkencreative.com/wp-content/uploads/2012/01/japan-matcha-green-tea-kitkat-1024x784.jpg" alt="..." style="height:500px;">
- 				</div>
-			    <div class="caption" style="display:inline-block; vertical-align:top;">
-			        <h3>Green Tea Kit Kat</h3>
-			        <p>Imported from Japan! All the goodness of kit kats with green tea flavor!</p>
-			        <a href="#" class="btn btn-default" role="button" style="position: relative;">Add to Cart</a></p>
+				<div class="image_view">
+ 					<img src="<?= $product['imgurl'] ?>"> 
+			    <div class="caption_view">
+			        <h3><?= $product['name'] ?></h3>
+			        <p><?= $product['description'] ?></p>
+			        <h3 style="color:red;">$<?= $product['price'] ?></h3>
+			        <form action='/main/add_item/<?= $product['id'] ?>' method='post'>
+			        	<input type='number' name='quantity' min='1' max='10' value='1'>
+			        	<input type='submit' style="position: relative;" value="Add to Cart">
+			        </form>
 			    </div>
 			      
 		
