@@ -90,6 +90,17 @@ body {
 	height: 60px;
 	overflow: auto;
 }
+<<<<<<< HEAD
+
+
+
+
+
+
+
+
+
+=======
 .image_view img{
 	width:500px;
 	display: inline-block;
@@ -134,3 +145,4 @@ body {
 	border-radius: 15px;
 	font-size: 16px;
 }
+>>>>>>> a8368032c504e7245ed81039ab0fdcfb9aa3c1d9
