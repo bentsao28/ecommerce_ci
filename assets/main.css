@@ -10,13 +10,37 @@ body {
 	position: relative;
 	padding-bottom: 100px;
 }
-.jumbotron{
-	background-image: url("http://www.nongshimusa.com/layouts/nongshim/images/img_prd_noodle_01.jpg");
-	background-repeat: no-repeat;
-	background-color: white;
-	background-position: right;
-
-	border: 1px solid gray;
+h2{
+    margin: 0;     
+    color: #666;
+    padding-top: 90px;
+    font-size: 52px;
+    font-family: "trebuchet ms", sans-serif;    
+}
+.item{
+    background: white;
+    text-align: center;
+    height: 350px;
+}
+.carousel{
+    margin-top: 20px;
+}
+.bs-example{
+	margin: 20px;
+}
+.carousel-caption h3{
+	color: black;
+	font-size: 50px;
+	width: 400px;
+	margin-left: 300px;
+	text-align: left;
+}
+.carousel-caption p{
+	color: black;
+	font-size: 15px;
+	margin-left: 300px;
+	margin-bottom: 50px;
+	text-align: left;
 }
 .footer{
 	position: absolute;
@@ -42,8 +66,6 @@ body {
 	text-decoration: none;
 }
 
-
-
 @media (min-width: 768px) {
 	.dropdown:hover .dropdown-menu {
 		display: block;
@@ -52,36 +74,24 @@ body {
 #menu{
 	text-align: right;
 	display: inline-block;
-	
 }
-
 #menu li{
 	display: inline-block;
 }
-
-
-
 #menu li a{
-	
 	display: inline-block;
 	padding: 5px;
 	padding-right: 40px;
-	/*border:1px solid black;
-	border-radius: 3px;*/
 	background-color: white;
 	text-align: center;
 }
-
 .thumbnail {
 	height: 398px;
-
 }
 
 .thumbnail img{
 	height: 193px;
-
 }
-
 .thumbnail h3{
 	height:50px;
 	overflow: auto;
@@ -90,20 +100,13 @@ body {
 	height: 60px;
 	overflow: auto;
 }
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-=======
-.image_view img{
-	width:500px;
+.image_view{
 	display: inline-block;
+	vertical-align: top;
+}
+.image_view img{
+	display: inline-block;
+	width: 300px;
 }
 .caption_view{
 	width: 400px;
@@ -133,7 +136,6 @@ body {
 	text-align: right;
 	width: 300px;
 	vertical-align: top;
-	
 }
 #buy{
 	margin-top: 50px;
@@ -145,4 +147,3 @@ body {
 	border-radius: 15px;
 	font-size: 16px;
 }
->>>>>>> a8368032c504e7245ed81039ab0fdcfb9aa3c1d9

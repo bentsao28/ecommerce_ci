@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>MBR Foods</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/main.css');?>">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -46,9 +47,9 @@
 	</nav>
 	<div id="wrapper">
 		<div class="container">
-
 				<div class="image_view">
  					<img src="<?= $product['imgurl'] ?>"> 
+ 				</div>
 			    <div class="caption_view">
 			        <h3><?= $product['name'] ?></h3>
 			        <p><?= $product['description'] ?></p>
@@ -58,10 +59,7 @@
 			        	<input type='submit' style="position: relative;" value="Add to Cart">
 			        </form>
 			    </div>
-			      
-		
-
-	</div>
+		</div>
 		<footer class="footer">
 		 	<ul>
 		 		<li><a href="">Terms and Conditions</a></li>

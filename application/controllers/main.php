@@ -169,6 +169,7 @@ class Main extends CI_Controller {
 	public function payment()
 	{
 		var_dump($this->input->post());
+		var_dump($this->session->userdata('cart'));
 		die();
 		redirect('/main/login');
 	}

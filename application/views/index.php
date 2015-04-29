@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>MBR Foods</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/main.css');?>">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -64,63 +65,99 @@
 			        <li><a href="#">New Arrivals</a></li>
 			      </ul> 
 
-			    <form class="navbar-form navbar-right" role="search">
+			    <!-- <form class="navbar-form navbar-right" role="search">
 		        <div class="form-group">
 		          <input type="text" class="form-control" placeholder="Search">
 		        </div>
 		        <button type="submit" class="btn btn-default">Submit</button>
-		      </form>
+		      </form> -->
 	 		 </div>
-	 		 <br>
-			<div class="jumbotron">
-			  <h1>Today Only!</h1>
-			  <p>Sale on Nongshim Instant Ramen!</p>
-			  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+			<div class="bs-example">
+			    <div id="myCarousel" class="carousel slide" data-interval="10000" data-ride="carousel">
+			    	<!-- Carousel indicators -->
+			        <ol class="carousel-indicators">
+			            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			            <li data-target="#myCarousel" data-slide-to="1"></li>
+			            <li data-target="#myCarousel" data-slide-to="2"></li>
+			        </ol>   
+			       <!-- Carousel items -->
+			        <div class="carousel-inner">
+			            <a href="/main/product_view/5"><div class="active item">
+			            	<img src="http://ecx.images-amazon.com/images/I/71dSeRs6eQL._SL1005_.jpg" style="height:370px; margin-left:150px;">
+			                <h2>Slide 1</h2>
+			                <div class="carousel-caption">
+			                  <h3>Nong Shim Instant Ramen on sale!</h3>
+			                  <p>A Favorite in Korea! Spicy and delicious!</p>
+			                </div></a>
+			            </div>
+			            <a href="/main/product_view/23"><div class="item">
+			                <img src="http://ecx.images-amazon.com/images/I/41bYnC1I8RL.jpg" style="height:370px; margin-left:140px;">
+			                <h2>Slide 2</h2>
+			                <div class="carousel-caption">
+			                  <h3>Bison Steak Sampler</h3>
+			                  <p>Next time you have a craving for beef, try bison instead. Extra lean and with all the goodness</p>
+			                </div></a>
+			            </div>
+			            <a href="/main/product_view/3"><div class="item">
+			                <img src="http://ecx.images-amazon.com/images/I/413DFETWRRL.jpg" style="height:370px; margin-left:150px;">
+			                <h2>Slide 3</h2>
+			                <div class="carousel-caption">
+			                  <h3>Eat more Nori Maki Arare</h3>
+			                  <p>A classic snack Japanese snack, you never had anything like this before!</p>
+			                </div></a>
+			            </div>
+			        </div>
+			        <!-- Carousel nav -->
+			        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+			            <span class="glyphicon glyphicon-chevron-left"></span>
+			        </a>
+			        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+			            <span class="glyphicon glyphicon-chevron-right"></span>
+			        </a>
+			    </div>
 			</div>
-			<div class="row">
+			<h3>Featured Products</h3>
+			<div class="row" style="margin-bottom:40px;">
 			  <div class="col-sm-6 col-md-3">
 			    <div class="thumbnail">
-			      <img src="http://www.hearkencreative.com/wp-content/uploads/2012/01/japan-matcha-green-tea-kitkat-1024x784.jpg" alt="...">
-			      <div class="caption">
-			        <h3>Green Tea Kit Kat</h3>
-			        <p>Imported from Japan! All the goodness of kit kats with green tea flavor!</p>
-			        <p><a href="productview.php" class="btn btn-primary" role="button">Learn More</a> <a href="#" class="btn btn-default" role="button">Add to Cart</a></p>
-			      </div>
-			    </div>
-			  </div>
-			  <div class="col-sm-6 col-md-3">
-			    <div class="thumbnail">
-			      <img src="http://www.weavernut.com/assets/images/wncprod/SM2574.jpg" alt="...">
-			      <div class="caption">
-			        <h3>Gems by Cadbury's</h3>
-			        <p>Straight from India, poor imitation of m&ms</p>
-			        <p><a href="productview.php" class="btn btn-primary" role="button">Learn More</a> <a href="#" class="btn btn-default" role="button">Add to Cart</a></p>
-			      </div>
-			    </div>
-			  </div>
-			  <div class="col-sm-6 col-md-3">
-			    <div class="thumbnail">
-			      <img src="http://mall.coimbatore.com/chocolates/fivestar.jpg" alt="...">
-			      <div class="caption">
-			        <h3>Cadbury's FiveStar</h3>
-			        <p>Better than Mars Bars!</p>
-			        <p><a href="productview.php" class="btn btn-primary" role="button">Learn More</a> <a href="#" class="btn btn-default" role="button">Add to Cart</a></p>
-			      </div>
-			    </div>
-			  </div>
-			  <div class="col-sm-6 col-md-3">
-			    <div class="thumbnail">
-			      <img src="http://www.paddysnax.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/i/m/img_02971.jpg" alt="...">
+			      <img src="http://ecx.images-amazon.com/images/I/61V9RY-dL6L.jpg" alt="...">
 			      <div class="caption">
 			        <h3>McVities Chocolate Digestives</h3>
-			        <p>Digestives with a layer of milk chocolate. Yummy!!</p>
-			        <p><a href="productview.php" class="btn btn-primary" role="button">Learn More</a> <a href="#" class="btn btn-default" role="button">Add to Cart</a></p>
+			        <p>A favorite among Brits! Wheat biscuits topped with a thin layer of smooth milk chocolate!</p>
+			        <p><a href="/main/product_view/32" class="btn btn-primary" role="button">Learn More</a>
 			      </div>
 			    </div>
 			  </div>
-			  
-
-
+			  <div class="col-sm-6 col-md-3">
+			    <div class="thumbnail">
+			      <img src="http://ecx.images-amazon.com/images/I/71HHWsfWcJL._SL1000_.jpg" alt="...">
+			      <div class="caption">
+			        <h3>Green Tea Kit Kat</h3>
+			        <p>Originating from Japan. This bag contains 12 individually wrapped mini bars.</p>
+			        <p><a href="/main/product_view/33" class="btn btn-primary" role="button">Learn More</a>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-6 col-md-3">
+			    <div class="thumbnail">
+			      <img src="http://martjackstorage.blob.core.windows.net/in-resources/23c09df6-eb5f-49c2-b8a7-48a42be26ed9/Images/ProductImages/Large/650030257_F.jpg" alt="...">
+			      <div class="caption">
+			        <h3>Nachni Soy Chips</h3>
+			        <p>These Nachni Chips not only makes a great tasty snack, but also add nutritious value to your body.</p>
+			        <p><a href="/main/product_view/11" class="btn btn-primary" role="button">Learn More</a>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-6 col-md-3">
+			    <div class="thumbnail">
+			      <img src="http://www.chitalebandhu.in/content/images/thumbs/0000078_bakarwadi_360.jpeg" alt="...">
+			      <div class="caption">
+			        <h3>Chitlebandhu Bhakarwadi</h3>
+			        <p>Fried crispy spicy spring rolls delivered to your doorstep!</p>
+			        <p><a href="/main/product_view/18" class="btn btn-primary" role="button">Learn More</a>
+			      </div>
+			    </div>
+			  </div>
 			</div>
 		</div>
 		<footer class="footer">

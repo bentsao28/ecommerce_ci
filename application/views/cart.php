@@ -38,7 +38,7 @@
 	<div id="wrapper">
 		<div class="container">
 			<div class="cart">
-				<h2>Your Shopping Cart</h2>
+				<h3>Your Shopping Cart</h3>
 				<table class="table table-striped">
 					<thead>
 						<tr>
@@ -212,28 +212,13 @@
 				<!-- billing form ends -->
 
 
-					<!-- <div id="payment">
+				<div id="payment">
 					<h4>Payment Method</h4><br>
-					<label>Credit Card Number </label>  <input type="text" name="first_name">
-					<label>Expireation Date </label>  <input type="date" name="number">
-					<input id="buy" type="submit" value="Place Order">
-				</form> -->
-						<!-- </div> -->
-				
-					<?php $newprice = $cart['total_price'] * '100' ?>
-				 
+					<label>Credit Card Number</label><input type="text" name="credit_card">
+					<label>Expiration Date</label><input type="date" name="expiration">
+					<input id="buy" type="submit" value="Place Order" disabled>
+				</div>
 				</form>
-				<!-- stripe api starts -->
-				 <script
-				    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-				    data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
-				    data-amount="<?= $newprice ?>"
-				    data-name="MBR FOODS"
-				    data-description="PAY"
-				    data-image="/128x128.png">
-				  </script>
-				<!-- stripe api ends -->
-
 			</div>
 		</div>
 		<footer class="footer">
