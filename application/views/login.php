@@ -6,7 +6,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-inverse">
+<div id="wrapper">
+	<nav class="navbar navbar-inverse">
 	  <div class="container-fluid">
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <!-- <div class="navbar-header">
@@ -28,66 +29,58 @@
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
-	  <div id="wrapper">
-	  <div class="container" >
-	  		<?php 
-			  			if($this->session->flashdata('errors'))
-			  			{
-			  				echo $this->session->flashdata('errors');
-			  			}
-			  			if($this->session->flashdata('success'))
-			  			{
-			  				echo $this->session->flashdata('success');
-			  			}
-			  		 ?>
+  <div class="container">
+  		<?php 
+  			if($this->session->flashdata('errors'))
+  			{
+  				echo $this->session->flashdata('errors');
+  			}
+  			if($this->session->flashdata('success'))
+  			{
+  				echo $this->session->flashdata('success');
+  			}
+  		?>
+	  	<h1 style="text-align:center;">Please Login or Register</h1>
+	  	<div class="forms" style="margin:auto; text-align:center;">
+		  	<div class="login" style="display:inline-block; height:400px; vertical-align:top; padding-left:100px; padding-right:100px; border-right:1px solid black;">
+		  		<h3>Login</h3><br>
+		  		<form action="/main/user_login" method="post">
+		  			<input type="hidden" name="login"><br><br>
+		  			<input type="text" name="email" placeholder="email"><br><br>
+		  			<input type="password" name="password" placeholder="password"><br><br><br>
+		  			<input type="submit" value="Login" style="float:right;">
+		  		</form>
+			</div>
 
-		  	<h1 style="text-align:center;">Please Login or Register</h1>
-		  	<div class="forms" style="margin:auto; text-align:center;">
-			  	<div class="login" style="display:inline-block; height:400px; vertical-align:top; padding-left:100px; padding-right:100px; border-right:1px solid black;">
-			  		<h3>Login</h3><br>
-			  		<form action="/main/user_login" method="post">
-			  			<input type="hidden" name="login"><br><br>
-			  			<input type="text" name="email" placeholder="email"><br><br>
-			  			<input type="password" name="password" placeholder="password"><br><br><br>
-			  			<input type="submit" value="Login" style="float:right;">
-			  		</form>
-				</div>
-
-				<div class="register" style="display:inline-block; padding-left:100px; padding-right:100px; vertical-align:top; margin:auto;">
-					<h3>New Users</h3>
-					
-			  					  		<form action="/main/reg_user" method="post">
-			  			<!-- <input type="hidden" name="login"><br><br> -->
-			  			<input type="text" name="first_name" placeholder="first name"><br><br>
-			  			<input type="text" name="last_name" placeholder="last name"><br><br>
-			  			<input type="text" name="email" placeholder="email"><br><br>
-			  			<input type="password" name="password" placeholder="password"><br><br>
-			  			<input type="password" name="confirm" placeholder="confirm password"><br><br>
-
-			  			<br>
-			  			<input type="submit" value="Register" style="float:right;">
-			  		</form>
-				</div>
+			<div class="register" style="display:inline-block; padding-left:100px; padding-right:100px; vertical-align:top; margin:auto;">
+				<h3>New Users</h3>		
+		  		<form action="/main/reg_user" method="post">
+		  			<!-- <input type="hidden" name="login"><br><br> -->
+		  			<input type="text" name="first_name" placeholder="first name"><br><br>
+		  			<input type="text" name="last_name" placeholder="last name"><br><br>
+		  			<input type="text" name="email" placeholder="email"><br><br>
+		  			<input type="password" name="password" placeholder="password"><br><br>
+		  			<input type="password" name="confirm" placeholder="confirm password"><br><br>
+		  			<br>
+		  			<input type="submit" value="Register" style="float:right;">
+		  		</form>
+			</div>
 		</div>
-
-
-
-
-	  </div>
+  </div>
 
 <!-- <nav class="navbar navbar-inverse" style="width:100%; height:15%;">
 	<p style="color:white;">This is a footer</p>
 </nav>
  -->
-		 <footer class="footer">
-			 	<ul>
-			 		<li><a href="">Terms and Conditions</a></li>
-			 		<li><a href="">Privacy Policy</a></li>
-			 		<li><a href="">About Us</a></li>
-			 		<li><a href="">Contact</a></li>
-			 	</ul>
-			 	<h5 style="color: gray;">Copyright MBR Foods Pvt. Ltd.</h5>
-		</footer>
-	</div>
+	<footer class="footer">
+	 	<ul>
+	 		<li><a href="">Terms and Conditions</a></li>
+	 		<li><a href="">Privacy Policy</a></li>
+	 		<li><a href="">About Us</a></li>
+	 		<li><a href="">Contact</a></li>
+	 	</ul>
+	 	<h5 style="color: gray;">Copyright MBR Foods Pvt. Ltd.</h5>
+	</footer>
+</div>
 </body>
 </html>

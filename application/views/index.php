@@ -14,38 +14,38 @@
 	</script>
 </head>
 <body>
-	<nav class="navbar navbar-inverse">
-	  <div class="container-fluid">
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <!-- <div class="navbar-header">
-	      <a class="navbar-brand" href="/">MBR Foods</a>
-	    </div> -->
-
-	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	      	<!-- <ul class="nav navbar-nav navbar-left">
-	        	<li><a href="login.php">Login</a></li>
-	    	</ul> -->
-
-	    	<img src="assets/mbr.png" style="display: inline-block; width:80px; margin-top:10px;">
-	      
-	      <ul class="nav navbar-nav navbar-right" style="margin-top:20px;">
-	        <?php 
-	        if($this->session->userdata('is_login') == true)
-	        	{
-		        	echo '<li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Welcome'.' '.$this->session->userdata('user_fname').'!<span class="caret"></span></a>';
-		        	echo '<ul class="dropdown-menu" role="menu">';
-		        	echo '<li><a href="/main/logoff">Log Off</a></li></ul>';
-		        }
-	        else
-	        	echo '<li><a href="/main/login">Login</a></li>';
-	        ?>
-	        <li><a href="/main/cart">Shopping Cart (<?= $this->session->userdata('cart')['total_items'] ?>)</a></li>
-	      </ul>
-	    </div><!-- /.navbar-collapse -->
-	  </div><!-- /.container-fluid -->
-	</nav>
 	<div id="wrapper">
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <!-- <div class="navbar-header">
+		      <a class="navbar-brand" href="/">MBR Foods</a>
+		    </div> -->
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      	<!-- <ul class="nav navbar-nav navbar-left">
+		        	<li><a href="login.php">Login</a></li>
+		    	</ul> -->
+
+		    	<img src="assets/mbr.png" style="display: inline-block; width:80px; margin-top:10px;">
+		      
+		      <ul class="nav navbar-nav navbar-right" style="margin-top:20px;">
+		        <?php 
+		        if($this->session->userdata('is_login') == true)
+		        	{
+			        	echo '<li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Welcome'.' '.$this->session->userdata('user_fname').'!<span class="caret"></span></a>';
+			        	echo '<ul class="dropdown-menu" role="menu">';
+			        	echo '<li><a href="/main/logoff">Log Off</a></li></ul>';
+			        }
+		        else
+		        	echo '<li><a href="/main/login">Login</a></li>';
+		        ?>
+		        <li><a href="/main/cart">Shopping Cart (<?= $this->session->userdata('cart')['total_items'] ?>)</a></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
 		<div class="container">
 			<div class="navigation-and-search">
 				<ul id="menu">
@@ -83,7 +83,7 @@
 			       <!-- Carousel items -->
 			        <div class="carousel-inner">
 			            <a href="/main/product_view/5"><div class="active item">
-			            	<img src="http://ecx.images-amazon.com/images/I/71dSeRs6eQL._SL1005_.jpg" style="height:370px; margin-left:150px;">
+			            	<img src="http://ecx.images-amazon.com/images/I/71dSeRs6eQL._SL1005_.jpg" style="max-height:100%; max-width:100%; margin-left:15%;">
 			                <h2>Slide 1</h2>
 			                <div class="carousel-caption">
 			                  <h3>Nong Shim Instant Ramen on sale!</h3>
@@ -91,7 +91,7 @@
 			                </div></a>
 			            </div>
 			            <a href="/main/product_view/23"><div class="item">
-			                <img src="http://ecx.images-amazon.com/images/I/41bYnC1I8RL.jpg" style="height:370px; margin-left:140px;">
+			                <img src="http://ecx.images-amazon.com/images/I/41bYnC1I8RL.jpg" style="max-height:100%; max-width:100%; margin-left:15%;">
 			                <h2>Slide 2</h2>
 			                <div class="carousel-caption">
 			                  <h3>Bison Steak Sampler</h3>
@@ -99,7 +99,7 @@
 			                </div></a>
 			            </div>
 			            <a href="/main/product_view/3"><div class="item">
-			                <img src="http://ecx.images-amazon.com/images/I/413DFETWRRL.jpg" style="height:370px; margin-left:150px;">
+			                <img src="http://ecx.images-amazon.com/images/I/413DFETWRRL.jpg" style="max-height:100%; max-width:100%; margin-left:15%;">
 			                <h2>Slide 3</h2>
 			                <div class="carousel-caption">
 			                  <h3>Eat more Nori Maki Arare</h3>
